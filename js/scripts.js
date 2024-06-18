@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     window.addEventListener('click', function (event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             closeModal();
         }
     });
@@ -57,7 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 params.append(key, value);
             });
 
-            fetch('https://jsonplaceholder.typicode.com/users?' + params.toString(), {
+            const url = 'https://jsonplaceholder.typicode.com/users?' + params.toString();
+
+            fetch(url, {
                 method: 'GET'
             })
             .then(response => {
