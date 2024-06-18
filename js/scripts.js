@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('modal');
 
     function openModal() {
-        fetch('register.html')
+        fetch('./register.html')
             .then(response => response.text())
             .then(data => {
                 modal.innerHTML = data;
